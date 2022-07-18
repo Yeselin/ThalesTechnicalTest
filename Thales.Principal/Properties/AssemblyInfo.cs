@@ -5,11 +5,11 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ThalesTechnicalTest")]
+[assembly: AssemblyTitle("Thales.Principal")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("ThalesTechnicalTest")]
+[assembly: AssemblyProduct("Thales.Principal")]
 [assembly: AssemblyCopyright("Copyright ©  2022")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("1bf3e1ac-0756-46ce-aa4e-a2861372f67e")]
+[assembly: Guid("d16f3818-6ed8-48bc-ba76-dc3c54b1db82")]
 
 // Version information for an assembly consists of the following four values:
 //

@@ -1,8 +1,13 @@
-﻿using Thales.CommonInterfaces.DTO;
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Thales.CommonInterfaces.DTO;
 
-namespace Thales.DataAccessLayer.DO
+namespace Thales.BusinessLayer.BO
 {
-    public class Employee_DO : IEmployee_DTO
+    public class Employee_BO : IEmployee_DTO
     {
         public int id { get; set; }
         public string employee_name { get; set; }

@@ -22,16 +22,14 @@ namespace Thales.DataAccessLayer
         /// <param name="sendMethod">Method HTTP (GET, PUT, POST, DELETE) for send data or query</param>
         /// <param name="Sendbody">Data body to share or consulting</param>
         /// <returns></returns>
-        public RestResponse RunPetition(string Url,Method sendMethod, object Sendbody)
+        public RestResponse RunPetition(string Url,Method sendMethod)
         {
             try
             {
                 System.Console.WriteLine("Entro en enviar peticion IRESTRESPONSE ");
                 RestClient client = new RestClient(Url);
                 RestRequest request = new RestRequest(Url,sendMethod);
-                string jsonString = JsonConvert.SerializeObject(Sendbody);
                 request.AddParameter("ContenType", ContentType.Json, ParameterType.RequestBody);
-                request.AddJsonBody(Sendbody);
                 request.RequestFormat = DataFormat.Json;
                 System.Console.WriteLine("EJECUTO PETICION ");
                 RestResponse response = client.Execute(request);

@@ -41,8 +41,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="DTO\IDataComplete_DTO.cs" />
-    <Compile Include="DTO\IDataSingle_DTO.cs" />
     <Compile Include="DTO\IEmployee_DTO.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

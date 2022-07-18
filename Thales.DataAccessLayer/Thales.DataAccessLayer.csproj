@@ -76,12 +76,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DO\Employee_DO.cs" />
-    <Compile Include="RequestByAPI.cs" />
+    <Compile Include="Class\RequestByAPI.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Thales.CommonInterfaces\Thales.CommonInterfaces.csproj">
+      <Project>{D42F67EB-FEAB-499A-9E46-99D2788C650F}</Project>
+      <Name>Thales.CommonInterfaces</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
