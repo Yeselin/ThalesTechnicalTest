@@ -18,21 +18,19 @@ namespace Thales.Principal.Controllers
         {
             operationBL = new EmployeeOperationsBL();
         }
-
-        [ActionName("Find")]
-        public ActionResult GetById(int id)
-        {
-            return View(ConsultOneEmployee(id));
-        }
-
         // GET: Employee
         public ActionResult Index()
         {
-            IEnumerable<Employee> datos= (IEnumerable<Employee>)ConsultAllEmployees();
+
+            IEnumerable<Employee> datos = (IEnumerable<Employee>)ConsultAllEmployees();
             return View(datos);
         }
 
-
+        // GET: Employee/Details/5
+        public ActionResult Details(int id)
+        {
+            return View(ConsultOneEmployee(id));
+        }
         [NonAction]
         public List<IEmployee_DTO> ConsultAllEmployees()
         {
@@ -46,7 +44,7 @@ namespace Thales.Principal.Controllers
         public Employee ConsultOneEmployee(int id)
         {
             Employee employee = new Employee();
-            string routeConsult =string.Format("{0}{1}/{2}",ConfigurationManager.AppSettings["BaseEndPoint"].ToString(),"employee",id.ToString());
+            string routeConsult = string.Format("{0}{1}/{2}", ConfigurationManager.AppSettings["BaseEndPoint"].ToString(), "employee", id.ToString());
             employee = (Employee)(IEmployee_DTO)operationBL.ObtainDataEmployee(routeConsult, out messageResult);
             return employee;
         }
